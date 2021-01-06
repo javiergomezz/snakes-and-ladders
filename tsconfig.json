@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "outDir": "dist",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "lib": ["ES2015"]
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "**/*.tests.ts", "**/*.spec.ts"]
+}
