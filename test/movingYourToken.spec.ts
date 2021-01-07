@@ -20,4 +20,12 @@ describe('Token can move across the Board', () => {
 
         expect(game.getTokenPosition()).toBe(4);
     })
+
+    it('Token can be moved forward multiple times', () => {
+        game.start();
+        game.moveToken(3);
+        game.moveToken(4);
+
+        expect(game.getTokenPosition()).toBe(8);
+    })
 })
