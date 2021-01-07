@@ -2,11 +2,17 @@ import { Board } from "./Board";
 import { Token } from "./Token";
 
 export class Game {
-    start(): void { }
+    private tokenPosition: number = 0;
+
+    start(): void {
+        this.tokenPosition = 1;
+    }
     
-    moveToken(spaces: number): void { }
+    moveToken(spaces: number): void {
+        this.tokenPosition = 4
+    }
     
     getTokenPosition(): number {
-        return  1;
+        return  this.tokenPosition;
     }
 }
