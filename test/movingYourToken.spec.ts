@@ -1,6 +1,6 @@
 import {Game} from '../src/Game'
 
-describe('Token can move across the Board', () => {
+describe('Token can be moved across the Board', () => {
 
     let game: Game;
 
@@ -14,7 +14,7 @@ describe('Token can move across the Board', () => {
         expect(game.getTokenPosition()).toBe(1);
     })
 
-    it('Token is on the fourth square when is moved three spaces from first square', () => {
+    it('Token can be moved forward', () => {
         game.start();
         game.moveToken(3);
 
