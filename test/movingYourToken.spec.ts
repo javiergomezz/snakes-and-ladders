@@ -8,4 +8,13 @@ describe('Token can move across the Board', () => {
 
         expect(game.getTokenPosition()).toBe(1);
     })
+
+    it('Token is on the fourth square when is moved three spaces from first square', () => {
+        let game: Game = new Game();
+
+        game.start();
+        game.moveToken(3);
+
+        expect(game.getTokenPosition()).toBe(4);
+    })
 })
