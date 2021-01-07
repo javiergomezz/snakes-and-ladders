@@ -9,7 +9,7 @@ export class Game {
     }
     
     moveToken(spaces: number): void {
-        this.tokenPosition = 4
+        this.tokenPosition += spaces;
     }
     
     getTokenPosition(): number {
