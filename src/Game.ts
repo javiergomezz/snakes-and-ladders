@@ -5,6 +5,6 @@ export class Game {
     start(): void { }
 
     getTokenPosition(): number {
-        return  0;
+        return  1;
     }
 }
