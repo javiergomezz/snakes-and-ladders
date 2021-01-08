@@ -46,8 +46,6 @@ describe('Moves are determined by dice rolls', () => {
       ]).it('Player can roll a six-sided die and have %d based on a random seed %d', (expectedDieResult: number, randomNumber: number) => {
         let minDieValue: number = 1;
         let maxDieValue: number = 6;
-        //let randomNumber: number = 0.5;
-        //let expectedDieResult: number = Math.floor(randomNumber * maxDieValue) + minDieValue;
         let dice: Dice = new Dice();
         spyOn(global.Math, 'random').and.returnValue(randomNumber);
 
