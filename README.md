@@ -58,8 +58,6 @@ Some improvements that could be made:
  options available because that point wasn't clear enough from the feature
  description.
 
-* Using an implementation of the 
-
 ## Build and test execution ##
 
 The **snakes-and-ladders** NodeJs module is based on **npm** and all the
@@ -71,12 +69,14 @@ For the execution of the tests you should have installed:
 * npm
 
 ### Compile ###
+
 For a fresh compile of the module we will use this command:
 
 > npm run clean build
 
 
 ### Run the unit tests ###
+
 We can run the unit tests executing the following command:
 
 > npm test
