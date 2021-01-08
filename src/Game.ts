@@ -2,6 +2,7 @@ import { Board } from "./Board";
 import { Token } from "./Token";
 
 export class Game {
+    playerRollsDie(): void { }
     private tokenPosition: number = 0;
 
     start(): void {

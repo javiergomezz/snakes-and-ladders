@@ -5,10 +5,12 @@ import {Player} from '../src/Player';
 
 describe('Token can be moved across the Board', () => {
 
+    let dice: Dice;
     let game: Game;
 
     beforeEach(() => {
-        game = new Game();
+        dice = new Dice();
+        game = new Game(dice);
     })
 
     it('Token is placed in the first square when the game is started', () => {
@@ -36,6 +38,17 @@ describe('Token can be moved across the Board', () => {
 const each = require("jest-each").default;
 
 describe('Moves are determined by dice rolls', () => {
+    it('When a player rolls a four the token moves until the fifth square', () => {
+        let dice: Dice = new Dice();
+        let game: Game = new Game(dice);
+        spyOn(dice, 'roll').and.returnValue(4);
+        
+        game.start();
+        game.playerRollsDie();
+
+        expect(game.getTokenPosition()).toBe(5);
+    })
+
     each([
         [6, 0.9],
         [5, 0.7],
