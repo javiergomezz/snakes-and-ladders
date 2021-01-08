@@ -3,6 +3,7 @@ import { Dice } from "../src/Dice";
 export class Game {
     private tokenPosition: number = 0;
     private readonly dice: Dice;
+    private readonly boardSize: number = 100
 
     constructor(dice: Dice) {
         this.dice = dice;
@@ -13,11 +14,13 @@ export class Game {
     }
 
     isFinished(): boolean {
-        return true;
+        return this.tokenPosition == this.boardSize;
     }
     
     moveToken(spaces: number): void {
-        this.tokenPosition += spaces;
+        if((this.boardSize - this.tokenPosition) >= spaces) {
+            this.tokenPosition += spaces;
+        }
     }
 
     playerRollsDie(): void {
