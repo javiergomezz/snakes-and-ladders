@@ -13,7 +13,7 @@ export class Game {
     }
 
     isFinished(): boolean {
-        return false;
+        return true;
     }
     
     moveToken(spaces: number): void {
