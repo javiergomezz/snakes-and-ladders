@@ -11,6 +11,10 @@ export class Game {
     start(): void {
         this.tokenPosition = 1;
     }
+
+    isFinished(): boolean {
+        return false;
+    }
     
     moveToken(spaces: number): void {
         this.tokenPosition += spaces;
