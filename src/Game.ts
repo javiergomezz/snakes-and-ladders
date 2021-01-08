@@ -1,9 +1,12 @@
-import { Board } from "./Board";
-import { Token } from "./Token";
+import { Dice } from "../src/Dice";
 
 export class Game {
-    playerRollsDie(): void { }
     private tokenPosition: number = 0;
+    private readonly dice: Dice;
+
+    constructor(dice: Dice) {
+        this.dice = dice;
+    }
 
     start(): void {
         this.tokenPosition = 1;
@@ -11,6 +14,10 @@ export class Game {
     
     moveToken(spaces: number): void {
         this.tokenPosition += spaces;
+    }
+
+    playerRollsDie(): void {
+        this.moveToken(this.dice.roll());
     }
     
     getTokenPosition(): number {

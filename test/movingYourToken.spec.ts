@@ -1,7 +1,5 @@
 import {Game} from '../src/Game';
 import {Dice} from '../src/Dice';
-import {Player} from '../src/Player';
-//import {Math} from '../src/Math'
 
 describe('Token can be moved across the Board', () => {
 
